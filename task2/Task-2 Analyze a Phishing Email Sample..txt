@@ -1,0 +1,43 @@
+1. download sample phishing email.
+	
+	- file is given in folder.
+
+2. Examine sender's email address for spoofing.
+	
+	- mail = banco.bradesco@atendimento.com.br
+	- it is fake mail.
+	- The widely used Banco Bradesco email format is {first}. {last}@bradesco.com.br 
+
+3. Check email headers for discrepancies (using online header analyzer)
+
+	- Tool:- EML Analyzer (https://eml-analyzer.herokuapp.com/), 
+		 MX Toolbox Email Header Analyzer  (https://mxtoolbox.com/EmailHeaders.aspx)
+	
+	- IP address and Domain is not match with original.
+
+	- sender Ip Address:- 137.184.34.4
+
+	- Extracted URL:- https://blog1seguimentmydomaine2bra.me/
+
+	- Extracted domains:- blog1seguimentmydomaine2bra.me, fonts.gstatic.com, fonts.googleapis.com
+
+4. SPF(sender policy framework) in this mail is fail.
+ 	
+       -authentication-results:-  spf=temperror (sender IP is 137.184.34.4) smtp.mailfrom=ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06; 					   
+				  dkim=none (message not signed) header.d=none;dmarc=temperror action=none 								    			 	 		  header.from=atendimento.com.br;compauth=fail reason=001
+
+5. examine IP address and Domain on Virus Total.
+
+	- VirusTotal:- https://www.virustotal.com/gui/home/upload
+	- it is not flagged because it is newly created domain but it is malicious.
+	- screenshot is given in folder. 
+
+6. Summary of it.
+ 
+	- A suspicious email was analyzed to determine whether it was a phishing attempt. The sender address banco.bradesco@atendimento.com.br
+ 	  was identified as fake, as Banco Bradesco’s legitimate format uses {first}.{last}@bradesco.com.br.
+
+	- Email header analysis (using EML Analyzer and MXToolbox) revealed IP and domain mismatches, with the sender IP 137.184.34.4 not belonging to Bradesco. The extracted malicious URL 	  https://blog1seguimentmydomaine2bra.me/ and related domains appeared abnormal.
+
+	- Authentication checks showed SPF fail, DKIM none, and DMARC temperror, confirming the email failed essential security validations. VirusTotal scans showed no detections, likely 	  because the domain was recently created, but its behavior and indicators classify it as malicious.
+
