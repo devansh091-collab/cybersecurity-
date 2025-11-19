@@ -1,0 +1,35 @@
+ Setup and Use a Firewall on Windows
+
+Note : all step screenshot is given with name.
+
+1. Open the firewall configuration tool on windows.
+
+	- Press Win + R → type wf.msc then Enter.
+	- the window is see on screen.
+
+2. List current firewall rules.
+
+	- In the left paneal, click on “Inbound Rules” → It’ll see all current rules (sorted by name, port, 	action, etc.)
+
+3. Add a rule to block inbound traffic on port 23. (Telnet)
+
+	- Right-click on “Inbound Rules” then click on New Rule…
+	- Choose the “Port” in check box And Next.
+	- check on TCP check box then go to Specific remote ports and give 23 port,then click on Next Button.
+	- Choose on the check box “Block the connection” then click on Next button.
+	- Check all of profiles (Domain, Private, Public) then click on Next button.
+	- Give Name: “Block Telnet (port 23)” then click on Finish.
+
+4. Test the rule.
+
+	- In the same machine go to on browser and type IP with Port : 127.0.0.1:23
+	- It will give error internet check and firewall blocking.
+
+5. Remove the test block rule.
+
+	- to Delete the rule Go back to wf.msc and enter then click on Inbound Rules It'll show rules.
+	- Now Find the rule “Block Telnet (port 23)” and right-click on it and Delete.
+	- now it is on normal state.
+6. Summary of how the firewall filters traffic.
+
+	- Windows Firewall is statefull. It evaluates inbound packets against the ordered list of rules. Rules are checked from top to bottom. The first matching rule wins (allow or block). 	  If no rule matches, the default policy is to block inbound traffic (unless explicitly allowed).
