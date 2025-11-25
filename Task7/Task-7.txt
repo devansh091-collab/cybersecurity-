@@ -1,0 +1,48 @@
+:Identify and Remove Suspicious Browser Extensions
+
+I'm not using chrome so perform the task in Microsoft Edge Browser.
+	
+Note :- screen shot is stored in folder name screenshot.
+
+1. First need to open Extension in Edge browser by Click the three dots (⋯) in the top-right corner,
+   then Select Extensions, Click Manage Extensions. 
+
+2. Then after check the Extension name and the intension of this extension.
+  
+	- Check Extension Name:
+	  Make sure it’s familiar and intentionally installed. Remove anything suspicious or unknown.
+
+	- Check Publisher:
+	  Trusted: Microsoft, Google, Adobe, LastPass, etc.
+	  Unknown publishers = higher risk.
+
+	- Check Last Updated Date:
+	  Recently updated = safe.
+	  Not updated for long = potentially unsafe.
+	
+	- Check Ratings & Reviews:
+	  Open store details → look for low ratings, complaints, or malware reports.
+
+3. Remove Unnecessary or Suspicious Extensions from Extensions.
+
+	- For each extension identified as risky:
+		Click Remove, Confirm removal
+		Ensure it does not reappear (some malware re-installs)
+
+	- This step improves browser's
+		Security, Performance, Privacy.
+
+4. Disable “Allow Extensions From Other Stores”
+
+	- This prevents accidental installation of risky Chrome extensions.
+	- Open Extensions and Turn OFF the toggle:
+		Allow extensions from other stores
+		It is a strong security measure.
+
+5. Restart Microsoft Edge for take effects.
+
+	- Close Edge fully and reopen it.
+	- This unloads removed extensions, refreshes the browser, and applies performance improvements.
+
+6. Summary of the Task:
+	- Completed a full Microsoft Edge extension audit by reviewing all installed items, checking publisher trust, update history, and permissions. 		  Removed anything unnecessary, secured settings, and restarted the browser to apply changes. Verified performance—faster load times, stable 	  	  browsing, no pop-ups, no redirects. The browser is now clean, secure, and optimized.
